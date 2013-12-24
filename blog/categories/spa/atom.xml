@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[AppBase]]></title>
-  <link href="http://johanbuys.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: SPA | AppBase]]></title>
+  <link href="http://johanbuys.github.io/blog/categories/spa/atom.xml" rel="self"/>
   <link href="http://johanbuys.github.io/"/>
   <updated>2013-12-24T11:22:35+02:00</updated>
   <id>http://johanbuys.github.io/</id>
@@ -40,21 +40,6 @@
 <p>It was and still is awesome, I work with it now on a daily basis and I am glad I had chosen it! My code is more structured, more functional and cleaner. By using directives and all the magic it provides like Dependency injection it is easy and &ldquo;nice&rdquo; to use it, objects are just plain objects no need to use an API to make special bindable objects.</p>
 
 <p>So for me SPA development starts and ends with angular it&rsquo;s a mature project with a clear direction and focus, it has a large and ever growing community and it&rsquo;s backed by Google, need I say more&hellip;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[In a Galaxy Far, Far Away...]]></title>
-    <link href="http://johanbuys.github.io/blog/2013/12/24/in-a-galaxy-far/"/>
-    <updated>2013-12-24T11:07:00+02:00</updated>
-    <id>http://johanbuys.github.io/blog/2013/12/24/in-a-galaxy-far</id>
-    <content type="html"><![CDATA[<p>Hi and welcome to the first post on my new blog! I finally got around to setting up octopress and so far I have been very much impressed.</p>
-
-<p>I decided to migrate to octopress, because running a wordpress blog started to become more work and time that I was able to sacrifice. It wasn&rsquo;t the writing of posts, but more the trying to optimize the speed and reducing 500 errors on the small VPS I was using. MySql tuning and php object caching all this and for what?</p>
-
-<p>Octopress solves all this, it&rsquo;s static so no need to run a resource heavy database, moreover you don&rsquo;t even have to manage your own server because I will be running this on someone else&rsquo;s server all this for free! You just can&rsquo;t beat that!</p>
-
-<p>Using octopress you can host your blog on GitHub or Heroku both which I use and have free accounts for. So all in all a big win! Stay tuned for more about technology, development and all things me.</p>
 ]]></content>
   </entry>
   
