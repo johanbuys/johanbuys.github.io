@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[AppBase Blog]]></title>
+  <link href="http://blog.appbase.co/atom.xml" rel="self"/>
+  <link href="http://blog.appbase.co/"/>
+  <updated>2013-12-24T09:05:20+02:00</updated>
+  <id>http://blog.appbase.co/</id>
+  <author>
+    <name><![CDATA[Johan Buys]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First post: In a galaxy far...]]></title>
+    <link href="http://blog.appbase.co/blog/2013/12/19/first-post-in-a-galaxy-far-dot-dot-dot/"/>
+    <updated>2013-12-19T20:27:00+02:00</updated>
+    <id>http://blog.appbase.co/blog/2013/12/19/first-post-in-a-galaxy-far-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>Hi and welcome to the first post on my new blog! I finally got around to setting up octopress and so far I have been very much impressed.</p>
+
+<p>I decided to migrate to octopress, because running a wordpress blog started to become more work and time that I was able to sacrifice. It wasn&rsquo;t the writing of posts, but more the trying to optimize the speed and reducing 500 errors on the small VPS I was using. MySql tuning and php object caching all this and for what?</p>
+
+<p>Octopress solves all this, it&rsquo;s static so no need to run a resource heavy database, moreover you don&rsquo;t even have to manage your own server because I will be running this on someone else&rsquo;s server all this for free! You just can&rsquo;t beat that!</p>
+
+<p>Using octopress you can host your blog on GitHub or Heroku both which I use and have free accounts for. So all in all a big win! Stay tuned for more about technology, development and all things me.</p>
+]]></content>
+  </entry>
+  
+</feed>
