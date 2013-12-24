@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://johanbuys.github.io/blog/2013/12/24/in-a-galaxy-far/</loc>
+        <loc>http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far/</loc>
         <lastmod>2013-12-24T11:22:25+02:00</lastmod>
     </url>
     <url>
-        <loc>http://johanbuys.github.io/blog/2013/12/24/single-page-apps/</loc>
+        <loc>http://blog.appbase.co/blog/2013/12/24/single-page-apps/</loc>
         <lastmod>2013-12-24T11:17:15+02:00</lastmod>
     </url>
     <url>
-        <loc>http://johanbuys.github.io/blog/archives/</loc>
+        <loc>http://blog.appbase.co/blog/archives/</loc>
         <lastmod>2013-12-24T11:22:25+02:00</lastmod>
     </url>
     <url>
-        <loc>http://johanbuys.github.io/</loc>
+        <loc>http://blog.appbase.co/</loc>
         <lastmod>2013-12-24T11:22:25+02:00</lastmod>
     </url>
     <url>
-        <loc>http://johanbuys.github.io/robots.txt</loc>
+        <loc>http://blog.appbase.co/robots.txt</loc>
         <lastmod>2013-12-24T10:57:32+02:00</lastmod>
     </url>
 </urlset>

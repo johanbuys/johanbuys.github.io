@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Angular | AppBase]]></title>
-  <link href="http://johanbuys.github.io/blog/categories/angular/atom.xml" rel="self"/>
-  <link href="http://johanbuys.github.io/"/>
-  <updated>2013-12-24T11:29:53+02:00</updated>
-  <id>http://johanbuys.github.io/</id>
+  <link href="http://blog.appbase.co/blog/categories/angular/atom.xml" rel="self"/>
+  <link href="http://blog.appbase.co/"/>
+  <updated>2013-12-24T11:37:15+02:00</updated>
+  <id>http://blog.appbase.co/</id>
   <author>
     <name><![CDATA[Johan Buys]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Single Page Apps]]></title>
-    <link href="http://johanbuys.github.io/blog/2013/12/24/single-page-apps/"/>
+    <link href="http://blog.appbase.co/blog/2013/12/24/single-page-apps/"/>
     <updated>2013-12-24T11:16:00+02:00</updated>
-    <id>http://johanbuys.github.io/blog/2013/12/24/single-page-apps</id>
+    <id>http://blog.appbase.co/blog/2013/12/24/single-page-apps</id>
     <content type="html"><![CDATA[<p>Single Page Apps or SPA&rsquo;s are all the rage and with good reason. About 3 years ago, I started to think about the idea and came to the conclusion that client machines have been putting on some weight in the last couple of years. We could no longer call clients &ldquo;thin&rdquo; and get away with it.</p>
 
 <!-- more -->

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Appbase | AppBase]]></title>
-  <link href="http://johanbuys.github.io/blog/categories/appbase/atom.xml" rel="self"/>
-  <link href="http://johanbuys.github.io/"/>
-  <updated>2013-12-24T11:29:53+02:00</updated>
-  <id>http://johanbuys.github.io/</id>
+  <link href="http://blog.appbase.co/blog/categories/appbase/atom.xml" rel="self"/>
+  <link href="http://blog.appbase.co/"/>
+  <updated>2013-12-24T11:37:15+02:00</updated>
+  <id>http://blog.appbase.co/</id>
   <author>
     <name><![CDATA[Johan Buys]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[In a Galaxy Far, Far Away...]]></title>
-    <link href="http://johanbuys.github.io/blog/2013/12/24/in-a-galaxy-far/"/>
+    <link href="http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far/"/>
     <updated>2013-12-24T11:07:00+02:00</updated>
-    <id>http://johanbuys.github.io/blog/2013/12/24/in-a-galaxy-far</id>
+    <id>http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far</id>
     <content type="html"><![CDATA[<p>Hi and welcome to the first post on my new blog! I finally got around to setting up octopress and so far I have been very much impressed.</p>
 
 <p>I decided to migrate to octopress, because running a wordpress blog started to become more work and time that I was able to sacrifice. It wasn&rsquo;t the writing of posts, but more the trying to optimize the speed and reducing 500 errors on the small VPS I was using. MySql tuning and php object caching all this and for what?</p>

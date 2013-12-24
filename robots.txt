@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://johanbuys.github.io/sitemap.xml 
+Sitemap: http://blog.appbase.co/sitemap.xml 
