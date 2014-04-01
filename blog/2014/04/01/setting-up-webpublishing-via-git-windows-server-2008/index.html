@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>In a Galaxy Far, Far Away... - AppBase</title>
+  <title>Setup Publishing via Git Windows Server 2008 IIS - AppBase</title>
   <meta name="author" content="Johan Buys">
 
   
-  <meta name="description" content="Hi and welcome to the first post on my new blog! I finally got around to setting up octopress and so far I have been very much impressed. I decided &hellip;">
+  <meta name="description" content="Recently I had to setup a web publishing environment to publish web pages on a live site. Ftp was out of the question seeing as the ports to ftp &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far">
+  <link rel="canonical" href="http://blog.appbase.co/blog/2014/04/01/setting-up-webpublishing-via-git-windows-server-2008">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="AppBase" type="application/atom+xml">
@@ -84,7 +84,7 @@
   
   <header>
     
-      <h1 class="entry-title">In a Galaxy Far, Far Away...</h1>
+      <h1 class="entry-title">Setup Publishing via Git Windows Server 2008 IIS</h1>
     
     
       <p class="meta">
@@ -100,20 +100,122 @@
   
 
 
-<time datetime="2013-12-24T11:07:00+02:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+<time datetime="2014-04-01T14:23:18+02:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Hi and welcome to the first post on my new blog! I finally got around to setting up octopress and so far I have been very much impressed.</p>
+<div class="entry-content"><p>Recently I had to setup a web publishing environment to publish web pages on a live site. Ftp was out of the question seeing as the ports to ftp where blocked on the vps we where using, so I had to use ssh.</p>
 
-<p>I decided to migrate to octopress, because running a wordpress blog started to become more work and time that I was able to sacrifice. It wasn&rsquo;t the writing of posts, but more the trying to optimize the speed and reducing 500 errors on the small VPS I was using. MySql tuning and php object caching all this and for what?</p>
+<p>Now in retrospect I could have simply used scp or something similar but as always I chose the long and hard road.</p>
 
-<p>Octopress solves all this, it&rsquo;s static so no need to run a resource heavy database, moreover you don&rsquo;t even have to manage your own server because I will be running this on someone else&rsquo;s server all this for free! You just can&rsquo;t beat that!</p>
+<p><strong>Setup the server</strong></p>
 
-<p>Using octopress you can host your blog on GitHub or Heroku both which I use and have free accounts for. So all in all a big win! Stay tuned for more about technology, development and all things me.</p>
+<ul>
+<li>Set up a new website on the server using the IIS manager.</li>
+<li>Choose a local folder to be the document root</li>
+<li>Downloaded and Install <a href="http://www.bitvise.com/winsshd" title="Bitvise SSH Server">Bitvise SSH server</a></li>
+<li>Downloaded and extract <a href="https://code.google.com/p/msysgit/downloads/detail?name=PortableGit-1.9.0-preview20140217.7z&amp;can=2&amp;q=">Msysgit Protable Git</a> into C:\Git</li>
+<li>Add C:\Git\bin and C:\Git\cmd to PATH variable</li>
+<li><p>Next Configure the SSH Server</p>
+
+<ul>
+<li>I used steps from <a href="http://blog.chronosinteractive.com/posts/using-windows-server-host-git-repository">http://blog.chronosinteractive.com/posts/using-windows-server-host-git-repository</a></li>
+<li>Follow the easy setup steps.</li>
+<li>Generate an RSA host key
+
+<ul>
+<li>Under &ldquo;Host Keys&rdquo; click &ldquo;Manage host keys&rdquo;</li>
+<li>Click &ldquo;Generate new…&rdquo;</li>
+<li>Make sure the algorithm is set to &ldquo;rsa&rdquo;</li>
+<li>Make sure the size is set to 1024</li>
+<li>Check the box to &ldquo;Set as employed keypair for this algorithm&rdquo;</li>
+<li>Click &ldquo;Generate&rdquo;</li>
+</ul>
+</li>
+<li>Close out of windows until you arrive again at the main control panel screen</li>
+<li>Configure the &ldquo;Everyone&rdquo; group to work with Git.
+
+<ul>
+<li>Under &ldquo;Settings&rdquo;, click on &ldquo;Edit advanced settings&rdquo;</li>
+<li>Select &ldquo;Windows groups&rdquo; from the tray on the left</li>
+<li>Select the &ldquo;Everyone&rdquo; group and click &ldquo;Edit&rdquo;</li>
+<li>Set &ldquo;Exec request prefix&rdquo; to cmd.exe /c sh gitcmdhelper.sh (last character must be a space)</li>
+<li>Click &ldquo;OK&rdquo;</li>
+</ul>
+</li>
+<li>Create gitcmdhelper.sh
+
+<ul>
+<li>Create a new file in C:\Git\bin titled gitcmdhelper.sh Set file contents to: $*</li>
+</ul>
+</li>
+<li>Test the connection.</li>
+</ul>
+</li>
+<li><p>Next Login via ssh from your local machine</p>
+
+<p>   ssh <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#117;&#115;&#x65;&#114;&#64;&#x73;&#101;&#114;&#118;&#101;&#x72;&#46;&#99;&#111;&#109;">&#x75;&#x73;&#101;&#114;&#x40;&#x73;&#x65;&#x72;&#118;&#x65;&#x72;&#x2e;&#99;&#x6f;&#x6d;</a></p></li>
+<li><p>Create a Directory where you will have your git repository.</p></li>
+</ul>
+
+
+<blockquote><pre><code>mkdir mywebsite.git 
+cd mywebsite.git
+</code></pre></blockquote>
+
+<ul>
+<li>do a</li>
+</ul>
+
+
+<blockquote><pre><code>git init --bare
+</code></pre></blockquote>
+
+<ul>
+<li>This will create a &ldquo;Bare&rdquo; Git repo, only the .git content will reside here, don&rsquo;t worry this is how we want it.</li>
+<li>Next we will create a hook ( a hook is a set of commands that will run based on some repo actions)</li>
+<li>Make sure you are in the repo dir and that there are some folders in there one we will use is aptly named &ldquo;hooks&rdquo;.</li>
+<li>do a</li>
+</ul>
+
+
+<blockquote><pre><code>cat &gt; hooks/post-receive
+</code></pre></blockquote>
+
+<ul>
+<li>and enter the following</li>
+</ul>
+
+
+<blockquote><pre><code>#!/bin/sh
+git --work-tree=/path/to/site/web/root checkout -f
+</code></pre></blockquote>
+
+<p>Ctrl+c will end input.</p>
+
+<p>Make sure to replace the &ldquo;/path/to/site/web/root&rdquo; with the folder we created in the beginning (where IIS will look for the website)</p>
+
+<p>make the file executable doing a</p>
+
+<pre><code>chmod +x post-receive
+</code></pre>
+
+<p><strong>Setup Your Client</strong></p>
+
+<p>On your local machine issue the following</p>
+
+<pre><code>git remote add production git@myserver.com/path/to/mywebsite.git
+git push production +master:refs/heads/master
+</code></pre>
+
+<p>And when you have changes to push to production simply
+do a normal</p>
+
+<pre><code>git push production
+</code></pre>
 </div>
 
 
@@ -136,12 +238,12 @@
   
 
 
-<time datetime="2013-12-24T11:07:00+02:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+<time datetime="2014-04-01T14:23:18+02:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/appbase/'>appbase</a>
+    <a class='category' href='/blog/categories/tutorials/'>tutorials</a>
   
 </span>
 
@@ -150,7 +252,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far/" data-via="johanbuys" data-counturl="http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.appbase.co/blog/2014/04/01/setting-up-webpublishing-via-git-windows-server-2008/" data-via="johanbuys" data-counturl="http://blog.appbase.co/blog/2014/04/01/setting-up-webpublishing-via-git-windows-server-2008/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -161,8 +263,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/12/24/single-page-apps/" title="Previous Post: Single Page apps">&laquo; Single Page apps</a>
       
-        <a class="basic-alignment right" href="/blog/2013/12/24/single-page-apps/" title="Next Post: Single Page apps">Single Page apps &raquo;</a>
       
     </p>
   </footer>
@@ -220,8 +322,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far/';
-        var disqus_url = 'http://blog.appbase.co/blog/2013/12/24/in-a-galaxy-far/';
+        var disqus_identifier = 'http://blog.appbase.co/blog/2014/04/01/setting-up-webpublishing-via-git-windows-server-2008/';
+        var disqus_url = 'http://blog.appbase.co/blog/2014/04/01/setting-up-webpublishing-via-git-windows-server-2008/';
         var disqus_script = 'embed.js';
       
     (function () {
